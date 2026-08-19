@@ -1,26 +1,122 @@
-# 🏥 Swasthya Queue — Rural Teleconsultation & Emergency Triage OS
+# 🏥 Swasthya Queue
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
-[![PWA Ready](https://img.shields.io/badge/PWA-Offline%20Capable-success.svg)](public/manifest.json)
-[![Tech Stack](https://img.shields.io/badge/Tech-HTML5%20%7C%20CSS3%20%7C%20JS%20(ES6%2B)%20%7C%20Leaflet-blue.svg)](#technology-stack)
-[![Status](https://img.shields.io/badge/Status-Academic%20Evaluation-orange.svg)](#academic-evaluation)
+<div align="center">
 
-> **Swasthya Queue** is an AI-inspired, multi-channel teleconsultation triage and emergency referral operating system engineered for Primary Health Centres (PHCs) in rural India. It bridges the gap between remote patients and doctors through instant triage across **Web Kiosks, USSD keypad codes (*599#), and SMS/WhatsApp Chatbots**.
+### AI-Powered Teleconsultation, Triage & Emergency Referral Platform
+
+Designed for Rural Primary Health Centres (PHCs) to streamline patient prioritization, teleconsultation workflows, and emergency referrals.
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge)](https://swasthya-queue.netlify.app/)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
+
+🌐 **Live Demo:** https://swasthya-queue.netlify.app/
+
+</div>
 
 ---
 
-## 📌 Problem Statement & Significance
+## 📖 Overview
 
-In rural healthcare settings across India:
-1. **Long Waiting Times & Overcrowding**: Patients wait hours at PHCs without prior symptom assessment.
-2. **Limited Connectivity**: Over 40% of rural patients use 2G feature phones without internet access.
-3. **Delayed Critical Referrals**: Severe conditions (like Acute Coronary Syndrome or Seizures) are often identified late due to unsorted queues.
+Swasthya Queue is an intelligent healthcare workflow platform built to address challenges faced by rural healthcare centres, including patient overcrowding, delayed triage, limited specialist availability, and inefficient referral systems.
 
-**Swasthya Queue solves this by:**
-- Providing **1-second automated triage scoring** using a START-inspired algorithm.
-- Enabling zero-internet registration via **USSD (`*599#`)** and **SMS/WhatsApp Chatbots**.
-- Giving doctors a **real-time prioritized queue** with 3-sentence AI summary briefs and vital stats.
-- Enabling **one-tap 108 ambulance dispatch** and hospital ICU bed reservation with live OpenStreetMap tracking.
+The platform combines:
+
+* Smart patient triage
+* Dynamic queue management
+* Teleconsultation support
+* Emergency referral workflows
+* Multi-channel accessibility
+* Offline-first operations
+
+to help healthcare providers deliver faster and more efficient care.
+
+---
+
+## 📑 Table of Contents
+
+* Overview
+* Problem Statement
+* Key Features
+* System Architecture
+* Access Channels
+* Triage Priority Model
+* Doctor Dashboard Credentials
+* Technology Stack
+* Getting Started
+* Browser Support
+* Project Structure
+* Roadmap
+* Contributing
+* License
+
+---
+
+## 🎯 Problem Statement
+
+Rural Primary Health Centres often struggle with:
+
+* High patient volumes
+* Delayed identification of critical cases
+* Manual queue management
+* Connectivity limitations
+* Inefficient emergency referral coordination
+
+These challenges can result in delayed treatment for patients who require urgent medical attention.
+
+Swasthya Queue introduces a structured triage and referral ecosystem to improve operational efficiency and patient outcomes.
+
+---
+
+## ✨ Key Features
+
+### Smart Triage Engine
+
+* START-inspired triage algorithm
+* Dynamic patient prioritization
+* Real-time queue reordering
+* Age-sensitive risk scoring
+* Automated severity classification
+
+### Multi-Channel Patient Registration
+
+* 🌐 Web Portal
+* 📟 USSD (*599#)
+* 💬 WhatsApp
+* 📱 SMS
+
+### Doctor Dashboard
+
+* Secure clinician login
+* Live patient queue
+* AI-generated patient summaries
+* Teleconsultation workflow
+* Patient messaging
+* Referral escalation
+
+### Emergency Command Center
+
+* Hospital matching
+* Bed availability tracking
+* Ambulance dispatch workflow
+* Referral management
+* Real-time status monitoring
+
+### Offline-First Operations
+
+* Local data persistence
+* Connectivity monitoring
+* Automatic synchronization
+* Recovery after network interruption
+
+### Multi-Language Accessibility
+
+* English
+* Hindi
+* Tamil
+* Telugu
+* Kannada
 
 ---
 
@@ -56,37 +152,6 @@ graph TD
     CC --> MAP
 ```
 
----
-
-## ✨ Key Features Matrix
-
-| Module | Feature | Target User / Infrastructure | Key Technology |
-| :--- | :--- | :--- | :--- |
-| **Patient Registration** | Web Kiosk Wizard | PHC Tablet / Smartphone | Dynamic DOM Wizard, Multilingual Dropdown |
-| **Offline Access** | USSD Simulator (`*599#`) | 2G Feature Phones (Keypad) | Keypad State Machine, Instant SMS Fallback |
-| **Conversational UI** | SMS / WhatsApp Chatbot | Literate Users / Basic Messaging | Async Chatbot Flow Engine |
-| **Doctor Dashboard** | Auto-Prioritized Queue | Teleconsultation Medical Staff | Dynamic Sorting (`RED` / `ORANGE` / `GREEN`) |
-| **Clinical Briefs** | AI Vital Summaries | Doctors / Health Workers | Automated Brief Generator |
-| **Tele-consultation** | Video Overlay & Messaging | Remote Doctor & Patient | Simulated WebRTC Overlay |
-| **Emergency Referral** | Live Bed & 108 Dispatch | Command Center Supervisors | Leaflet.js / OpenStreetMap Real-time Radar |
-| **Accessibility** | Multilingual & Dark Mode | All Stakeholders | Google Translate API & CSS Custom Properties |
-
----
-
-## 🧮 Triage Scoring Algorithm Breakdown
-
-The platform implements a START-inspired triage scoring model:
-
-| Factor / Symptom | Points / Logic | Priority Tier |
-| :--- | :--- | :--- |
-| **Critical Symptoms** (*Chest Pain, Breathlessness, Seizure*) | `+4 points` each | **RED (Critical)**: Score $\ge 8$ |
-| **Moderate Symptoms** (*Fever, Severe Headache, Injury*) | `+2 points` each | **ORANGE (Urgent)**: Score $4 - 7$ |
-| **Mild Symptoms** (*Cold, Vomiting, Abdominal Pain*) | `+1 point` each | **GREEN (Routine)**: Score $1 - 3$ |
-| **Age Vulnerability** (*Age $> 60$ or $< 5$ years*) | `× 1.5 multiplier` | Automatic priority escalation |
-| **Patient Discomfort Rating** | `+1 to +5 points` | Self-reported severity scale |
-
----
-
 ## 📁 Repository Structure
 
 ```
@@ -119,46 +184,89 @@ swasthya-queue/
 │       ├── doctor-flow.js      # Live queue renderer & video overlay
 │       ├── dispatch-flow.js    # OpenStreetMap Leaflet & bed booking
 │       └── app.js              # Application entry point & router
-├── EVALUATION_GUIDE.md         # Dedicated guide for evaluator/teacher testing
 ├── LICENSE                     # MIT Open Source License
 ├── README.md                   # Project documentation
 ├── index.html                  # Main HTML entry point
 ├── package.json                # NPM project dependencies & scripts
 └── vite.config.js              # Vite server & build configuration
 ```
+---
+
+## 🚑 Access Channels
+
+| Channel      | Connectivity Requirement | Target Users             |
+| ------------ | ------------------------ | ------------------------ |
+| Web Portal   | Internet Available       | Clinics & Health Workers |
+| USSD (*599#) | No Internet Required     | Rural Communities        |
+| WhatsApp     | Smartphone Users         | Remote Patients          |
+| SMS          | Basic Phones             | Low-Connectivity Areas   |
 
 ---
 
-## 🚀 Quick Start & Installation
+## 🚨 Triage Priority Model
 
-### Prerequisites
-- Node.js (v18 or higher recommended)
-- NPM or UV package manager
+| Priority  | Category | Action                |
+| --------- | -------- | --------------------- |
+| 🔴 RED    | Critical | Immediate Attention   |
+| 🟠 ORANGE | Moderate | Priority Consultation |
+| 🟢 GREEN  | Routine  | Standard Queue        |
 
-### Local Setup Instructions
+### Scoring Framework
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/swasthya-queue.git
-   cd swasthya-queue
-   ```
+| Clinical Factor         | Score    |
+| ----------------------- | -------- |
+| Chest Pain              | +4       |
+| Breathlessness          | +4       |
+| Seizure                 | +4       |
+| High Fever              | +2       |
+| Severe Headache         | +2       |
+| Injury                  | +2       |
+| Vomiting                | +1       |
+| Abdominal Pain          | +1       |
+| Common Cold             | +1       |
+| Patient Severity Rating | +1 to +5 |
+| Age Risk Multiplier     | ×1.5     |
 
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
+---
 
-3. **Launch Local Development Server**:
-   ```bash
-   npm run dev
-   ```
-   *The app will automatically open at `http://localhost:3000`.*
+## 👨‍⚕️ Doctor Dashboard Credentials
 
-4. **Build Production Bundle**:
-   ```bash
-   npm run build
-   ```
+| Field    | Value       |
+| -------- | ----------- |
+| Username | `doctor`    |
+| Password | `doctor123` |
 
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+
+### Mapping & Geospatial Services
+
+* Leaflet.js
+* OpenStreetMap
+
+### Communication Channels
+
+* USSD Workflow Simulation
+* SMS Workflow Simulation
+* WhatsApp Workflow Simulation
+
+### Localization
+
+* Google Translate Widget
+
+### Typography
+
+* Inter
+* Outfit
+
+---
 ---
 
 ## 🎓 Academic Evaluation & Credentials
