@@ -1,0 +1,30 @@
+{
+  "name": "swasthya-queue",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI-powered teleconsultation & emergency triage platform for rural primary health centres (Web, USSD, SMS)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "healthcare",
+    "teleconsultation",
+    "triage",
+    "rural-health",
+    "ussd",
+    "pwa",
+    "leaflet",
+    "india"
+  ],
+  "author": "Swasthya Queue Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+}
