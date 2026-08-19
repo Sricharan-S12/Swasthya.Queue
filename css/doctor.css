@@ -1,0 +1,228 @@
+/* Doctor Dashboard Queue Cards */
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.q-card {
+  background: var(--surface-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.q-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-glow);
+  transform: translateY(-2px);
+}
+
+.q-main {
+  display: flex;
+  padding: 18px 22px;
+  cursor: pointer;
+  align-items: center;
+  gap: 18px;
+}
+
+.q-indicator {
+  width: 6px;
+  align-self: stretch;
+  border-radius: 6px;
+}
+
+.q-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 17px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.q-details {
+  flex: 1;
+}
+
+.q-name {
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.q-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.q-status {
+  text-align: right;
+}
+
+.q-score {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.q-wait {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* Expanded Patient Brief & Telemetry */
+.q-brief {
+  border-top: 1px solid var(--border-glass);
+  padding: 24px;
+  background: rgba(11, 17, 32, 0.5);
+  display: none;
+  animation: slideUpFade 0.3s ease;
+}
+
+.q-card.expanded .q-brief {
+  display: block;
+}
+
+.vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.vital-box {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-glass);
+  padding: 14px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.vital-box:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.vital-val {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+
+.vital-lbl {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.val-danger { color: var(--red); }
+.val-warn { color: var(--orange); }
+.val-ok { color: var(--primary); }
+
+.ai-summary {
+  background: rgba(99, 102, 241, 0.1);
+  border-left: 4px solid #6366F1;
+  padding: 18px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 22px;
+}
+
+.ai-summary p {
+  font-size: 14px;
+  color: #A5B4FC;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Video Consultation HUD Overlay */
+.video-modal {
+  background: #070B14;
+  padding: 0;
+  max-width: 960px;
+  width: 95%;
+  height: 82vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-hover);
+  margin: 0 auto;
+}
+
+.video-header {
+  padding: 18px 26px;
+  background: rgba(15, 23, 42, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-bottom: 1px solid var(--border-glass);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+}
+
+.video-main-feed {
+  flex: 1;
+  background: #0B1120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.video-pip {
+  position: absolute;
+  bottom: 100px;
+  right: 28px;
+  width: 180px;
+  height: 130px;
+  background: rgba(30, 41, 59, 0.9);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--primary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: var(--primary-glow);
+}
+
+.video-controls {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(12px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border-top: 1px solid var(--border-glass);
+}

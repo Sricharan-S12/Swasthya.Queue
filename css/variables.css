@@ -1,0 +1,84 @@
+/* =========================================================
+   SWASTHYA QUEUE — HIGH-END DESIGN SYSTEM TOKENS
+   ========================================================= */
+
+:root {
+  /* Color Palette - Vibrant Medical Teals & Obsidian Dark Mode Default */
+  --bg-gradient: radial-gradient(circle at 80% 20%, #0d3b36 0%, #091e24 40%, #060b13 100%);
+  --bg: #070B14;
+  --surface: #0F172A;
+  --surface-card: rgba(15, 23, 42, 0.75);
+  --surface-glass: rgba(15, 23, 42, 0.65);
+  --surface-hover: rgba(30, 41, 59, 0.85);
+
+  /* Neon Primary Colors */
+  --primary: #14B8A6;
+  --primary-dark: #0F766E;
+  --primary-light: rgba(20, 184, 166, 0.15);
+  --primary-glow: 0 0 25px rgba(20, 184, 166, 0.35);
+  --primary-gradient: linear-gradient(135deg, #0D9488 0%, #06B6D4 50%, #3B82F6 100%);
+
+  /* Priority Accent Tiers */
+  --red: #F43F5E;
+  --red-dark: #E11D48;
+  --red-light: rgba(244, 63, 94, 0.15);
+  --red-glow: 0 0 25px rgba(244, 63, 94, 0.4);
+  --red-gradient: linear-gradient(135deg, #E11D48 0%, #F43F5E 100%);
+
+  --orange: #F59E0B;
+  --orange-dark: #D97706;
+  --orange-light: rgba(245, 158, 11, 0.15);
+  --orange-glow: 0 0 20px rgba(245, 158, 11, 0.3);
+
+  --blue: #3B82F6;
+  --blue-dark: #2563EB;
+  --blue-light: rgba(59, 130, 246, 0.15);
+  --blue-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+
+  --purple: #8B5CF6;
+  --purple-light: rgba(139, 92, 246, 0.15);
+
+  /* Typography Colors */
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+
+  /* Borders & Glass Dividers */
+  --border: rgba(51, 65, 85, 0.7);
+  --border-glass: rgba(255, 255, 255, 0.12);
+  --border-glow: rgba(20, 184, 166, 0.4);
+
+  /* Radii & Shadows */
+  --radius-xl: 20px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  --shadow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+  --shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 25px rgba(20, 184, 166, 0.2);
+
+  /* Fonts */
+  --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+}
+
+/* Light Theme Mode Palette */
+body.light-mode {
+  --bg-gradient: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-card: rgba(255, 255, 255, 0.9);
+  --surface-glass: rgba(255, 255, 255, 0.8);
+  --surface-hover: #F1F5F9;
+
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-dim: #94A3B8;
+
+  --border: #E2E8F0;
+  --border-glass: rgba(226, 232, 240, 0.8);
+  --border-glow: rgba(13, 148, 136, 0.3);
+
+  --shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 20px 40px -10px rgba(15, 23, 42, 0.15), 0 0 20px rgba(13, 148, 136, 0.15);
+}

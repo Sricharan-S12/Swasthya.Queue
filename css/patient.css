@@ -1,0 +1,266 @@
+/* Portal Selection Cards */
+.portal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 860px;
+  margin: 40px auto;
+}
+
+@media (max-width: 768px) {
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portal-card {
+  background: var(--surface-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: 44px 36px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.portal-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary);
+}
+
+.portal-icon {
+  font-size: 60px;
+  margin-bottom: 24px;
+  display: inline-block;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+}
+
+.portal-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.portal-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.portal-btn {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s;
+  border: none;
+  box-shadow: var(--primary-glow);
+}
+
+/* Patient Access Modes */
+.access-modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.access-card {
+  padding: 20px;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: var(--surface-card);
+}
+
+.access-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.access-card.selected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  box-shadow: var(--primary-glow);
+}
+
+.access-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.access-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.access-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Symptoms Selector Grid */
+.sym-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.sym-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  background: rgba(15, 23, 42, 0.6);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+  color: var(--text-main);
+}
+
+.sym-btn:hover {
+  border-color: var(--primary);
+  background: rgba(20, 184, 166, 0.1);
+}
+
+.sym-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: var(--primary-glow);
+}
+
+/* Severity Discomfort Rating Scale */
+.sev-scale {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.sev-item {
+  flex: 1;
+  padding: 14px 6px;
+  text-align: center;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.25s;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.sev-item .num {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+
+.sev-item .lbl {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.sev-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.sev-item.active {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.sev-item.active:nth-child(1) { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
+.sev-item.active:nth-child(2) { border-color: #10B981; background: rgba(16, 185, 129, 0.15); color: #34D399; }
+.sev-item.active:nth-child(3) { border-color: var(--orange); background: var(--orange-light); color: var(--orange); }
+.sev-item.active:nth-child(4) { border-color: #F87171; background: rgba(248, 113, 113, 0.15); color: #FCA5A5; }
+.sev-item.active:nth-child(5) { border-color: var(--red); background: var(--red-light); color: var(--red); box-shadow: var(--red-glow); }
+
+/* USSD Phone Keypad */
+.phone-frame {
+  background: #0F172A;
+  border-radius: 28px;
+  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--border-glow);
+}
+
+.phone-screen {
+  background: #06382D;
+  border-radius: 14px;
+  padding: 18px;
+  min-height: 220px;
+  font-family: 'Courier New', monospace;
+  color: #A7F3D0;
+  font-size: 14px;
+  margin-bottom: 18px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-y: auto;
+  border: 1px solid rgba(167, 243, 208, 0.2);
+}
+
+.phone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.btn-key {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid var(--border-glass);
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.btn-key:active {
+  background: var(--primary);
+  transform: scale(0.95);
+}
+
+.btn-call {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: span 3;
+  margin-top: 6px;
+  box-shadow: var(--primary-glow);
+}
